@@ -22,7 +22,7 @@ data = {
 [sub_resource type="ImageTexture" id="ImageTexture_1yxmi"]
 image = SubResource("Image_ljmqp")
 
-[node name="Bombodoro! 🍅💣" type="Control"]
+[node name="BOMBodoro! 🍅💣" type="Control"]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15

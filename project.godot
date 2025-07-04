@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Bombodoro! 🍅💣 (Pomodoro Timer)"
+config/name="BOMBodoro! 🍅💣 (Pomodoro Timer)"
 config/description="An EXPLOSIVE Pomodoro timer built right into Godot!"
 config/version="1"
 config/features=PackedStringArray("4.4", "GL Compatibility")
