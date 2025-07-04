@@ -1,4 +1,4 @@
-# Bombodoro!!! (Pomodoro Timer)
+# Bombodoro! 🍅💣 (Pomodoro Timer)
 
 An EXPLOSIVE Pomodoro timer built right into Godot!
 
