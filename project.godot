@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Bombodoro"
+config/description="An EXPLOSIVE Pomodoro timer built right into Godot!"
+config/version="1"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+BlankitRuntime="*res://addons/blankit/BlankitRuntime.gd"
+BlankitModals="*res://addons/blankit/systems/modals/BlankitModals.tscn"
+BlankitSaving="*res://addons/blankit/systems/saving/BlankitSaving.gd"
+BlankitTime="*res://addons/blankit/systems/time/BlankitTime.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/blankit/plugin.cfg", "res://addons/pomodorodot/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
