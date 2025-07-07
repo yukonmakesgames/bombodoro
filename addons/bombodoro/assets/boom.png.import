@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp4jhqou4aodq"
-path="res://.godot/imported/timer_texture.png-b51bd40f217b23d2b13197c0de63fe9f.ctex"
+uid="uid://dthqp73y4nw35"
+path="res://.godot/imported/boom.png-ba2eb458a53b980ad5a59bf84fef5eae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/bombodoro/assets/timer_texture.png"
-dest_files=["res://.godot/imported/timer_texture.png-b51bd40f217b23d2b13197c0de63fe9f.ctex"]
+source_file="res://addons/bombodoro/assets/boom.png"
+dest_files=["res://.godot/imported/boom.png-ba2eb458a53b980ad5a59bf84fef5eae.ctex"]
 
 [params]
 

@@ -1,12 +1,14 @@
 @tool
 extends Control
 
-@onready var timer: Timer = $Timer
-@onready var timer_label: Label = $ScrollContainer/MarginContainer/VBoxContainer/TextureRect/TimerLabel
-@onready var status_label: Label = $ScrollContainer/MarginContainer/VBoxContainer/StatusLabel
-@onready var count_label: Label = $ScrollContainer/MarginContainer/VBoxContainer/CountLabel
-@onready var start_button: Button = $ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/StartButton
-@onready var skip_button: Button = $ScrollContainer/MarginContainer/VBoxContainer/HBoxContainer/SkipButton
+@export_group("References")
+@export var timer: Timer
+@export var timer_label: Label
+@export var status_label: Label
+@export var count_label: Label
+@export var start_button: Button
+@export var skip_button: Button
+@export var animation_player: AnimationPlayer
 
 var on_break : bool = false
 var count : int = 1
@@ -20,6 +22,8 @@ func _ready() -> void:
 	timer.stop()
 	skip_button.visible = false
 	refresh()
+	play_idle("boom")
+	animation_player.animation_finished.connect(play_idle)
 
 func _process(delta: float) -> void:
 	if timer.is_stopped():
@@ -28,6 +32,7 @@ func _process(delta: float) -> void:
 		timer_label.text = get_converted_time(timer.time_left)
 
 func button() -> void:
+	play_idle(animation_player.current_animation)
 	if timer.is_stopped() or timer.paused:
 		start()
 	else:
@@ -54,6 +59,7 @@ func end() -> void:
 		count += 1
 	on_break = !on_break
 	refresh()
+	animation_player.play("boom")
 
 func refresh() -> void:
 	if on_break:
@@ -73,3 +79,8 @@ func get_converted_time(time: int) -> String:
 	var minutes: int = floori(time / 60.0)
 	var seconds: int = time % 60
 	return "%02d:%02d" % [minutes, seconds]
+
+
+func play_idle(_anim : String) -> void:
+	if _anim == "boom":
+		animation_player.play("idle")

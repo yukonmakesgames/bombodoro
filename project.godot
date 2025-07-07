@@ -14,14 +14,7 @@ config/name="BOMBodoro! 🍅💣 (Pomodoro Timer)"
 config/description="An EXPLOSIVE Pomodoro timer built right into Godot!"
 config/version="1"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
-
-[autoload]
-
-BlankitRuntime="*res://addons/blankit/BlankitRuntime.gd"
-BlankitModals="*res://addons/blankit/systems/modals/BlankitModals.tscn"
-BlankitSaving="*res://addons/blankit/systems/saving/BlankitSaving.gd"
-BlankitTime="*res://addons/blankit/systems/time/BlankitTime.gd"
+config/icon="uid://i5st66lhgh4"
 
 [editor_plugins]
 

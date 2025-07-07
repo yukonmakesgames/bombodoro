@@ -6,7 +6,7 @@ An EXPLOSIVE Pomodoro timer built right into Godot!
 
 Bombodoro is licensed under The MIT License, and is completely free of charge. Do whatever you want with it!
 
-The timer features the font [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P/about) by CodeMan38. The license is found alongside the font in the fonts folder.
+The timer features the fonts [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) and [Sour Gummy](https://fonts.google.com/specimen/Sour+Gummy). Their license is found alongside the font files in the fonts folder.
 
 ## 🙋‍♀️ Support
 
