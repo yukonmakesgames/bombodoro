@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d32jb2i5frxhd"
-path="res://.godot/imported/background.png-b7cb2d22b787fe7661a4935fa08d8c80.ctex"
+uid="uid://dthqp73y4nw35"
+path="res://.godot/imported/boom_00.png-b24801e30c7dbaf6822112ac3c2f80c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/bombodoro/assets/background.png"
-dest_files=["res://.godot/imported/background.png-b7cb2d22b787fe7661a4935fa08d8c80.ctex"]
+source_file="res://addons/bombodoro/assets/boom_00.png"
+dest_files=["res://.godot/imported/boom_00.png-b24801e30c7dbaf6822112ac3c2f80c3.ctex"]
 
 [params]
 

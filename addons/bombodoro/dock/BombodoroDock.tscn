@@ -1,14 +1,16 @@
-[gd_scene load_steps=21 format=3 uid="uid://ddfke0f1q5j3t"]
+[gd_scene load_steps=26 format=3 uid="uid://ddfke0f1q5j3t"]
 
 [ext_resource type="FontFile" uid="uid://caq8iev6chpsf" path="res://addons/bombodoro/fonts/SourGummy/SourGummy-SemiBold.ttf" id="1_3ow2b"]
 [ext_resource type="Script" uid="uid://0fdqgoyck4my" path="res://addons/bombodoro/dock/BombodoroDock.gd" id="1_ljmqp"]
 [ext_resource type="StyleBox" uid="uid://dtqcryia4md4f" path="res://addons/bombodoro/dock/button_pressed.tres" id="1_ysx7i"]
-[ext_resource type="Texture2D" uid="uid://d32jb2i5frxhd" path="res://addons/bombodoro/assets/background.png" id="2_1yxmi"]
 [ext_resource type="StyleBox" uid="uid://nfxjnq73mhqd" path="res://addons/bombodoro/dock/button_normal.tres" id="2_nayra"]
 [ext_resource type="Texture2D" uid="uid://6q5ged7vo5ji" path="res://addons/bombodoro/assets/tomato_00.png" id="3_1yxmi"]
 [ext_resource type="FontFile" uid="uid://fps6rhk1ypoq" path="res://addons/bombodoro/fonts/PressStart2P/PressStart2P-Regular.ttf" id="3_ysx7i"]
+[ext_resource type="Texture2D" uid="uid://cdx0uou48uopg" path="res://addons/bombodoro/assets/work_background.png" id="5_fuv3f"]
+[ext_resource type="Texture2D" uid="uid://b31fpvut5640g" path="res://addons/bombodoro/assets/break_background.png" id="6_k7car"]
 [ext_resource type="Texture2D" uid="uid://184jxcirgtbq" path="res://addons/bombodoro/assets/tomato_01.png" id="6_ouy8p"]
-[ext_resource type="Texture2D" uid="uid://dthqp73y4nw35" path="res://addons/bombodoro/assets/boom.png" id="7_0h1ci"]
+[ext_resource type="Texture2D" uid="uid://dthqp73y4nw35" path="res://addons/bombodoro/assets/boom_00.png" id="7_0h1ci"]
+[ext_resource type="Texture2D" uid="uid://bji6nkls5l1i4" path="res://addons/bombodoro/assets/boom_01.png" id="7_fuv3f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nayra"]
 
@@ -72,7 +74,64 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/VBoxContainer/TextureRect:texture")
+tracks/0/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_0h1ci")]
+}
+
+[sub_resource type="Animation" id="Animation_3ow2b"]
+resource_name = "boom"
+length = 2.66667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.533333, 0.8, 1.1, 1.36667, 1.6, 1.86667, 2.13333, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_0h1ci"), ExtResource("7_fuv3f"), ExtResource("7_0h1ci"), ExtResource("7_fuv3f"), ExtResource("7_0h1ci"), ExtResource("7_fuv3f"), ExtResource("7_0h1ci"), ExtResource("7_fuv3f"), ExtResource("7_0h1ci"), ExtResource("7_fuv3f")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_k7car"]
+resource_name = "ticking_2"
+length = 0.533337
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -84,19 +143,19 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel:position")
+tracks/1/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
+"update": 1,
 "values": [Vector2(134, 279)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel:visible")
+tracks/2/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -106,42 +165,14 @@ tracks/2/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_3ow2b"]
-resource_name = "boom"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/VBoxContainer/TextureRect:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_0h1ci")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="Animation" id="Animation_nayra"]
-resource_name = "idle"
+resource_name = "ticking"
 length = 0.533337
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("MarginContainer/VBoxContainer/TextureRect:texture")
+tracks/0/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -153,7 +184,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel:position")
+tracks/1/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -165,7 +196,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel:visible")
+tracks/2/path = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -179,12 +210,13 @@ tracks/2/keys = {
 _data = {
 &"RESET": SubResource("Animation_ouy8p"),
 &"boom": SubResource("Animation_3ow2b"),
-&"idle": SubResource("Animation_nayra")
+&"stopped": SubResource("Animation_k7car"),
+&"ticking": SubResource("Animation_nayra")
 }
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ouy8p"]
 
-[sub_resource type="Image" id="Image_0h1ci"]
+[sub_resource type="Image" id="Image_k7car"]
 data = {
 "data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 226, 226, 26, 224, 224, 224, 104, 224, 224, 224, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 1, 225, 225, 225, 76, 224, 224, 224, 128, 224, 224, 224, 115, 226, 226, 226, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 205, 224, 224, 224, 255, 224, 224, 224, 243, 225, 225, 225, 83, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 225, 225, 225, 76, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 202, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 134, 255, 255, 255, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 182, 224, 224, 224, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 219, 226, 226, 226, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 243, 225, 225, 225, 83, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 88, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 225, 225, 225, 85, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 254, 224, 224, 224, 128, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 241, 226, 226, 226, 79, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 216, 224, 224, 224, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 178, 237, 237, 237, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 254, 224, 224, 224, 129, 255, 255, 255, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 128, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 216, 224, 224, 224, 255, 224, 224, 224, 241, 226, 226, 226, 79, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 225, 225, 225, 76, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 255, 224, 224, 224, 202, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 224, 224, 224, 32, 224, 224, 224, 107, 231, 231, 231, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 1, 224, 224, 224, 74, 224, 224, 224, 128, 224, 224, 224, 114, 225, 225, 225, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "format": "RGBA8",
@@ -193,12 +225,16 @@ data = {
 "width": 24
 }
 
-[sub_resource type="ImageTexture" id="ImageTexture_3ow2b"]
-image = SubResource("Image_0h1ci")
+[sub_resource type="ImageTexture" id="ImageTexture_d8jjv"]
+image = SubResource("Image_k7car")
 
-[node name="BOMBodoro! 🍅💣" type="Control" node_paths=PackedStringArray("timer", "timer_label", "status_label", "count_label", "start_button", "skip_button", "animation_player")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ow2b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7car"]
+
+[node name="BOMBodoro! 🍅💣" type="Control" node_paths=PackedStringArray("timer", "timer_label", "status_label", "count_label", "start_button", "skip_button", "animation_player", "about_panel", "root", "background", "boom_sfx_button")]
 clip_contents = true
-custom_minimum_size = Vector2(600, 700)
+custom_minimum_size = Vector2(700, 700)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,22 +243,29 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_r50po")
 script = ExtResource("1_ljmqp")
+paused_color = Color(0.941176, 0.258824, 0.34902, 1)
+work_background = ExtResource("5_fuv3f")
+break_background = ExtResource("6_k7car")
 timer = NodePath("Timer")
-timer_label = NodePath("MarginContainer/VBoxContainer/TextureRect/TimerLabel")
-status_label = NodePath("MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Info/StatusLabel")
-count_label = NodePath("MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Info/CountLabel")
-start_button = NodePath("MarginContainer/VBoxContainer/Buttons/StartButton")
-skip_button = NodePath("MarginContainer/VBoxContainer/Buttons/SkipButton")
+timer_label = NodePath("MarginContainer/Root/VBoxContainer/TextureRect/TimerLabel")
+status_label = NodePath("MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer/Info/StatusLabel")
+count_label = NodePath("MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer/Info/CountLabel")
+start_button = NodePath("MarginContainer/Root/VBoxContainer/Buttons/StartButton")
+skip_button = NodePath("MarginContainer/Root/VBoxContainer/Buttons/SkipButton")
 animation_player = NodePath("AnimationPlayer")
+about_panel = NodePath("MarginContainer/AboutPanel")
+root = NodePath("MarginContainer/Root")
+background = NodePath("Background")
+boom_sfx_button = NodePath("MarginContainer/Root/HBoxContainer/ExplosionSFXButton")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1yxmi")
+texture = ExtResource("5_fuv3f")
 expand_mode = 4
 stretch_mode = 1
 
@@ -230,7 +273,7 @@ stretch_mode = 1
 libraries = {
 &"": SubResource("AnimationLibrary_0h1ci")
 }
-autoplay = "idle"
+autoplay = "stopped"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 1500.0
@@ -246,21 +289,31 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Root" type="Control" parent="MarginContainer"]
 layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 0
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Root/VBoxContainer"]
 custom_minimum_size = Vector2(550, 440)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("3_1yxmi")
+mouse_filter = 0
+texture = ExtResource("7_0h1ci")
 expand_mode = 1
 
-[node name="TimerLabel" type="Label" parent="MarginContainer/VBoxContainer/TextureRect"]
+[node name="TimerLabel" type="Label" parent="MarginContainer/Root/VBoxContainer/TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -274,6 +327,7 @@ offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.8, 1)
+mouse_filter = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
@@ -289,50 +343,156 @@ text = "25:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/Root/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Root/VBoxContainer/PanelContainer"]
 layout_mode = 2
+mouse_filter = 0
 
-[node name="Info" type="HBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+[node name="Info" type="HBoxContainer" parent="MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
+mouse_filter = 0
 alignment = 1
 
-[node name="StatusLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Info"]
+[node name="StatusLabel" type="Label" parent="MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer/Info"]
 layout_mode = 2
+mouse_filter = 0
 text = "Time to work!"
 horizontal_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Info"]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer/Info"]
 layout_mode = 2
 
-[node name="CountLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/Info"]
+[node name="CountLabel" type="Label" parent="MarginContainer/Root/VBoxContainer/PanelContainer/MarginContainer/Info"]
 layout_mode = 2
+mouse_filter = 0
 text = "#1"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/Root/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
 theme_override_styles/separator = SubResource("StyleBoxEmpty_ouy8p")
 
-[node name="Buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Buttons" type="HBoxContainer" parent="MarginContainer/Root/VBoxContainer"]
 custom_minimum_size = Vector2(384, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 0
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+[node name="StartButton" type="Button" parent="MarginContainer/Root/VBoxContainer/Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "START"
 
-[node name="SkipButton" type="Button" parent="MarginContainer/VBoxContainer/Buttons"]
+[node name="SkipButton" type="Button" parent="MarginContainer/Root/VBoxContainer/Buttons"]
 visible = false
 layout_mode = 2
-icon = SubResource("ImageTexture_3ow2b")
+icon = SubResource("ImageTexture_d8jjv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -411.0
+offset_bottom = 60.0
+grow_horizontal = 0
+mouse_filter = 0
+
+[node name="ExplosionSFXButton" type="Button" parent="MarginContainer/Root/HBoxContainer"]
+layout_mode = 2
+text = "EXPLOSION SFX"
+
+[node name="InformationButton" type="Button" parent="MarginContainer/Root/HBoxContainer"]
+layout_mode = 2
+text = "?"
+
+[node name="AboutPanel" type="PanelContainer" parent="MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/AboutPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/AboutPanel/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="AboutHeaderLabel" type="Label" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "What the flip is this?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AboutLabel" type="Label" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+text = "A Pomodoro timer with an explosive twist! Stay sharp as you race against a ticking tomato bomb, built to keep you focused and just a little bit stressed (in a fun way).
+Work for 25 minutes, take a short break, and when the timer’s up—BOOM! That’s your cue to rest and reset before the next round."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 18
+theme_override_styles/separator = SubResource("StyleBoxEmpty_3ow2b")
+
+[node name="CreditsHeaderLabel" type="Label" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Who the heck made this?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CreditsLabel" type="Label" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+text = "James Currier: Audio
+Pearl Slayton: Art
+Yukon Wainczak: Programming"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="BackButton" type="Button" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+disabled = true
+text = "BACK"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxEmpty_k7car")
 
 [connection signal="timeout" from="Timer" to="." method="end"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/StartButton" to="." method="button"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Buttons/SkipButton" to="." method="end"]
+[connection signal="pressed" from="MarginContainer/Root/VBoxContainer/Buttons/StartButton" to="." method="button"]
+[connection signal="pressed" from="MarginContainer/Root/VBoxContainer/Buttons/SkipButton" to="." method="end"]
+[connection signal="pressed" from="MarginContainer/Root/HBoxContainer/ExplosionSFXButton" to="." method="toggle_explosion_sfx"]
+[connection signal="pressed" from="MarginContainer/Root/HBoxContainer/InformationButton" to="." method="toggle_about"]
+[connection signal="pressed" from="MarginContainer/AboutPanel/MarginContainer/ScrollContainer/VBoxContainer2/BackButton" to="." method="toggle_about"]
