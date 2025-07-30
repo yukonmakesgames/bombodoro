@@ -1,6 +1,10 @@
 # BOMBodoro! 🍅💣 (Pomodoro Timer)
 
+<img src="addons/bombodoro/assets/icon.png" width="256" alt="BOMBodoro logo">
+
 An EXPLOSIVE Pomodoro timer built right into Godot!
+
+Featuring audio by James Currier and art by Pearl Slayton!
 
 ## ⚖️ License
 
