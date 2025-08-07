@@ -4,6 +4,8 @@
 
 An EXPLOSIVE Pomodoro timer built right into Godot!
 
+[Godot Asset Library](https://godotengine.org/asset-library/asset/4187)
+
 Featuring audio by James Currier and art by Pearl Slayton!
 
 ## ⚖️ License
