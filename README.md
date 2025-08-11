@@ -8,6 +8,14 @@ An EXPLOSIVE Pomodoro timer built right into Godot!
 
 Featuring audio by James Currier and art by Pearl Slayton!
 
+## ⚙️ Installation
+
+1. Search up "BOMBodoro" in the AssetLib tab in the Godot project you intend to install the plugin into.
+2. Click on BOMBodoro, and press "Download". Once another window pops up, press "Install".
+3. In the File Menu, navigate to "Projects" > "Projects Settings" and click on the "Plugins" tab.
+4. Enable the checkbox next to the BOMBodoro plugin. The BOMBodoro window should appear docked in your editor.
+5. Get timing!!!
+
 ## ⚖️ License
 
 Bombodoro is licensed under The MIT License, and is completely free of charge. Do whatever you want with it!
